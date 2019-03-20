@@ -1,0 +1,472 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{verse}
+\usepackage[nonumberlist]{glossaries}
+\usepackage{glossary-mcols}
+
+% Set up the glossaries for author names:
+\renewcommand{\glsmcols}{3}
+\setglossarystyle{mcolindex}
+\makenoidxglossaries
+\renewcommand{\glossaryname}{Author Abbreviations}
+
+% Keep consistent MRS RAVOON text on the last line:
+\newcommand{\ravoon}{\textsc{Mrs\ Ravoon}}
+
+% Define the author formatting:
+\newcommand{\poemauthor}[1]{\nopagebreak{\centering #1\par}}
+
+% Define the author's initials:
+\newglossaryentry{un}{name={??}, description={Unknown}}
+\newglossaryentry{gd}{name={GD}, description={Giles Droop}}
+\newglossaryentry{vc}{name={VC}, description={Viv Cripps}}
+\newglossaryentry{ec}{name={EC}, description={Elizabeth Cripps}}
+\newglossaryentry{ad}{name={AD}, description={Alastair Droop}}
+\newglossaryentry{am}{name={AM}, description={Jane Marczewski}}
+\newglossaryentry{nh}{name={NH}, description={Nick Hornigold}}
+
+% Define the stanza ID system:
+\newcounter{thestanza}
+\newcounter{thestanzaversion}
+\setcounter{thestanza}{1}
+\setcounter{thestanzaversion}{1}
+\newcommand{\stanza}[1]{{\footnotesize\hskip-\vleftskip\llap{\Roman{thestanza} (\gls{#1})}}\hskip\vleftskip\stepcounter{thestanza}\setcounter{thestanzaversion}{1}\ignorespaces}
+\newcommand{\stanzaversion}[1]{{\footnotesize\hskip-\vleftskip\llap{\Roman{thestanza}\alph{thestanzaversion} (\gls{#1})}}\hskip\vleftskip\stepcounter{thestanzaversion}\ignorespaces}
+
+\newenvironment{rverse*}{
+\begin{patverse}
+}{
+\ignorespacesafterend
+\end{patverse}
+}
+
+\newenvironment{rverse}[1][un]{
+\begin{patverse}
+\stanza{#1}
+}{
+\ignorespacesafterend
+\end{patverse}
+}
+
+\newenvironment{rverseversion}[1][un]{
+\begin{patverse}
+\stanzaversion{#1}
+}{
+\ignorespacesafterend
+\end{patverse}
+}
+
+
+% Define the line indentation pattern:
+\indentpattern{1012}
+
+\begin{document}
+
+% The original
+\settowidth{\versewidth}{When there rose through the ooze, like a monstrous balloon,}
+\poemtitle{Alternative Endings to an Unwritten Ballad}
+\poemauthor{Paul Dehn (1912--1979)}
+\begin{verse}[\versewidth]
+
+\begin{rverse*}
+I stole through the dungeons, while everyone slept, \\*
+Till I came to the cage where the Monster was kept. \\*
+There, locked in the arms of a Giant Baboon, \\*
+Rigid and smiling, lay \ldots{} \ravoon{}! \\!
+\end{rverse*}
+
+\begin{rverse*}
+I climbed the clock-tower in the first morning sun \\*
+And 'twas midday at least ere my journey was done; \\*
+But the clock never sounded the last stroke of noon, \\*
+For there, from the clapper, swung \ravoon{}. \\!
+\end{rverse*}
+
+\begin{rverse*}
+I hauled in the line, and I took my first look \\*
+At the half-eaten horror that hung from the hook. \\*
+I had dragged from the depths of the limpid lagoon \\*
+The luminous body of \ravoon{}. \\!
+\end{rverse*}
+
+\begin{rverse*}
+I fled in the storm, thorough lightning and thunder, \\*
+And there, as a flash split the darkness asunder, \\*
+Chewing a rat's-tail and mumbling a rune, \\*
+Mad in the moat squatted \ravoon{}. \\!
+\end{rverse*}
+
+\begin{rverse*}
+I stood by the waters so green and so thick, \\*
+And I stirred at the scum with my old, withered stick; \\*
+When there rose through the ooze, like a monstrous balloon, \\*
+The bloated cadaver of \ravoon{}. \\!
+\end{rverse*}
+
+\begin{rverse*}
+Facing the fens, I looked back from the shore \\*
+Where all had been empty a moment before; \\*
+And there, by the light of the Lincolnshire moon, \\*
+Immense on the marshes, stood \dots{} \ravoon{}! \\!
+\end{rverse*}
+
+\end{verse}
+
+% Our efforts:
+\settowidth{\versewidth}{From the tureen we ladled, with a large slotted spoon}
+\poemtitle{Alternative Endings to Alternative Endings to an Unwritten Ballad}
+\poemauthor{Various}
+\begin{verse}[\versewidth]
+
+\begin{rverse}
+Yesterday's fight saw her punched on the jaw \\
+We knew she'd be angry, and probably sore --- \\
+The swelling looked much like a weather balloon \\
+Obscuring the features of \ravoon{} \\!
+\end{rverse}
+
+\begin{rverse}[gd]
+The orchestra cuts are not a success. \\*
+They've saved us some money, but Oh what a mess! \\*
+The first violin and second bassoon \\*
+must be played at the same time by \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+``You're a clever, unprincipled, self-serving liar, \\*
+You're a confident, ruthless, ambitious high-flier, \\*
+You're charming, you're mad, you can play the buffoon, \\*
+You should go into politics MRS RAVOON!'' \\!
+\end{rverse}
+
+\begin{rverse}[nh]
+She stood by a tree trunk, with pistol in hand, \\*
+And there in the jungle she made her last stand, \\*
+Facing fierce warriors of far Cameroon \\*
+Defiant and dauntless stood \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[ad]
+The narcotics cartels, both US and Hispanic \\*
+Were shaken with fear that bordered on panic, \\*
+For the drug dealer's murder in downtown Canc\'un \\*
+Bore the grizzly callsign of \ravoon{}.
+\end{rverse}
+
+\begin{rverse}[gd]
+It seemed that the robber had run out of luck. \\*
+The getaway quad bike had hit a big truck \\*
+There in the wall, just like in a cartoon \\*
+Was a hole in the shape of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[gd]
+Round the rim of the object appeared a thin crack \\*
+Recalling `The Alien' I took a step back: \\*
+There in the darkness from a fibrous cocoon \\*
+Emerged the first larval instar of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[am]
+``She's awa'!'' cried McTavish ``She left wi' the tide \\*
+Wi' the brave wee girl rowin' an' Prince Charlie beside; \\*
+For the hopes o' oor nation and the fate o' oor croon \\*
+All gae wi' the lassie called \ravoon{}.'' \\!
+\end{rverse}
+
+\begin{rverse}
+Although she had told him he was totally wrong \\
+He would not desist from his passionate song \\
+The poor lovelorn gypsy continued to croon \\
+hopeless sweet nothings to \ravoon{} \\!
+\end{rverse}
+
+\begin{rverse}[vc]
+In darkest deep Sussex as the sukebind writhed \\*
+The Starkadders klettered their dishes and cried \\*
+For the woodshed nemesis of Aunt Ada Doom \\*
+At last stood revealed as \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[nh]
+And she fell in love with that soldier so smart, \\*
+The man from the military captured her heart. \\*
+That day she was wed to a Heavy Dragoon, \\*
+And Emily Smith became \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+I fell to my knees by the pit in the sands \\*
+I lifted the casket with trembing hands; \\*
+But I found in the chest not a single dubloon \\*
+Just a jade-inlaid bust of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+``Is there life on that planet?'' the scientists wondered. \\*
+There's a clue to be found in sequence 400; \\*
+These are shots of the flank of a desolate dune, \\*
+Emerging from which is \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[gd]
+Jim's passion was seaweed in all of its guises. \\*
+He'd gather up fragments of all shapes and sizes. \\*
+With dulse and with wrack the walls he'd festoon \\*
+in the ancestral dwelling of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[vc]
+Sleepless, sinuous, sliding and slow \\*
+She slipped into the swamp where the water was low \\*
+Slinking and swimming like a viper (Gaboon) \\*
+The sinister shape of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[nh]
+Oh, ‘twas the Dread Lurgy, the outlook was poor. \\*
+Just then a great doctor walked in at the door. \\*
+Spike Milligan cured her – that prominent Goon. \\*
+A lucky escape there, for \ravoon{}! \\!
+\end{rverse}
+
+\begin{rverse}[gd]
+The captain looked up and turned white as a bone. \\*
+He collapsed on the deck and emitted a groan. \\*
+There on the iceberg with a monstrous harpoon \\*
+Stood his sable–clad nemesis \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[nh]
+Onto the scaffold the prisoner was led, \\*
+Down onto the block she lowered her head, \\*
+And the from her shoulders her head it was hewn. \\*
+Thus died the traitorous \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+Though rotten tomatoes were winging my way, \\*
+On the podium I was determined to stay. \\*
+There was anger because I had dared to impugn \\*
+The fascist agenda of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[am]
+Not his Bond-baddie hairstyle nor his increasing girth, \\*
+Nor the hats of his generals were free from her mirth\ldots{} \\*
+But his patience wore thin, and Great Leader Jong-Un \\*
+Fired a nuclear missile at \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[gd]
+The aliens landed, of that there’s no doubt. \\*
+Some folks were abducted; trees wandered about. \\*
+The corn circles came, in the last days of June \\*
+And they all showed the visage of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[gd]
+The quarryman’s find was a media sensation \\*
+Now in the museum, on view to the nation \\*
+It’s a large limestone slab from an ancient lagoon \\*
+Containing a fossil of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[ec]
+I crawled to the summit one shadowy night \\*
+I reached for the cairn; I crumpled with fright \\*
+For prone on the corpse of a lumbering loon \\*
+Black-clad and cackling, lay \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[gd]
+The sale-of-work ladies were in a right state; \\*
+the cake stall had suffered a terrible fate: \\*
+the only thing left was a half macaroon, \\*
+bearing the teeth-marks of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[gd]
+They rowed to the small uninhabited isle, \\*
+The victim was drugged but would wake in a while. \\*
+These intelligent folk were about to maroon \\*
+The Republican Candidate \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+Wearing a cape and a weird pointy hat \\*
+She tootled a nose-flute and hopped round a mat. \\*
+With a loud clap of thunder began the monsoon,  \\*
+For this was the rain-dance of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[ec]
+I fled to the beaches, sought solace in sand \\*
+But peace was denied me: up struck the band \\*
+And dancing the tango with Ban Ki Moon \\*
+Was a banshee in Lycra: \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+What decided the battle was a small group of peasants \\*
+Brandishing pitchforks and dressed up as pheasants. \\*
+And leading the charge of this motley platoon \\*
+On a stampeding rhino rode \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[nh]
+Into the night the Beast dragged her away. \\*
+Her only defender too timid to stay: \\*
+Abandoned to die, by that shameful poltroon, \\*
+Unworthy defender of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[gd]
+The casino was crowded, the place was a riot, \\*
+When all of a sudden the whole show went quiet; \\*
+The hand was three sevens, a `royal pontoon', \\*
+And it netted three million for \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+The mathematician repeatedly said \\*
+He'd had nightmares where some THING had sat on his bed. \\*
+This incubus looked like a vast mouldy prune; \\*
+'Twas the Fourier transform of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+Across her pale profile the candlelight danced, \\*
+Her measured tones held the party entranced: \\*
+Who was the sire of that noble quadroon? \\*
+Nobody knew save \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverseversion}
+The spell had malfunctioned, the outcome was curious: \\*
+He wasn't Prince Charming - in fact he was furious. \\*
+He most closely resembled a rabid raccoon \\*
+As he poured out invective at \ravoon{}. \\!
+\end{rverseversion}
+
+\begin{rverseversion}[nh]
+Impaled on the antlers of a very large moose, \\*
+Both eyes were pecked out by a savage grey goose, \\*
+And her throat was torn out by a rabid raccoon, \\*
+Thus ends the sad saga of \ravoon{}. \\!
+\end{rverseversion}
+
+\begin{rverse}
+The night was cold, and the weather was hailey \\
+As I stepped from the darkness and into the ceilidh \\
+But there on the platform drumming a brisk rigadoon \\
+Was the one that I most feared --- \ravoon{} \\!
+\end{rverse}
+
+\begin{rverse}
+After months on the trail I caught up with my foe. \\*
+My six–gun was loaded; I was ready to go. \\*
+In the hot dusty street outside the saloon \\*
+I confronted the outlaw \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[ad]
+We set out from Prince Rupert on Highway sixteen; \\*
+for the Yellowhead route is a slow but scerene \\*
+We went by the North road, as in Saskatoon \\*
+We hoped to revisit old \ravoon{} \\!
+\end{rverse}
+
+\begin{rverseversion}[gd]
+Our eponymous heroine sat on a shelf \\*
+Composing much doggerel naming herself, \\*
+When up spoke the ghost of Siegfried Sassoon: \\*
+``These are crimes against literature, \ravoon{}'' \\!
+\end{rverseversion}
+
+\begin{rverseversion}
+Who dares to shatter the peace of the quad? \\
+Those who behave thus must answer to God! \\
+There, declaiming the poems of Siegfried Sassoon \\
+With passionate anguish was \ravoon{} \\!
+\end{rverseversion}
+
+\stepcounter{thestanza}
+\setcounter{thestanzaversion}{1}
+
+\begin{rverseversion}
+Saint George lay concussed by the Dragon’s dread tail \\*
+The maiden continued to struggle and wail \\*
+When down through the bracken, not a moment too soon \\*
+In full shining armour rode \ravoon{}. \\!
+\end{rverseversion}
+
+\begin{rverseversion}
+The taps and the hinges were crusted with rust \\*
+The loo bowl was cracked and layered with dust \\*
+I tugged at the flush not a moment too soon — \\*
+There in the U–bend lurked \ravoon{}! \\!
+\end{rverseversion}
+
+\begin{rverse}[ad]
+I knew right away that a duel was quite certain, \\*
+her revolver was aimed through the saloon back curtain \\*
+So I spat out my tobacco in the bar room spittoon \\*
+And rose to do battle with \ravoon{} \\!
+\end{rverse}
+
+\begin{rverse}[am]
+We knew she and the cook had come here to fight \\*
+But not of the outcome, ’till later that night; \\*
+From the tureen we ladled, with a large slotted spoon \\*
+The mortal remains of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+The ogres were feasting, on Midsummer’s night \\*
+I twisted in torment, I fled from the sight \\*
+Too late! All around me, I spotted, were strewn \\*
+The last toasted titbits of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverseversion}[ec]
+No! cried the cabinet (all from south o' the border) \\*
+Yes! cried the PM: she'll keep Boris in order \\*
+Hammond was dropped for the MP from Troon \\*
+That merciless martinet \ravoon{}. \\!
+\end{rverseversion}
+
+\begin{rverseversion}
+From her drivers and irons the divots fly out. \\*
+They wanted to ban her but she's got friends with clout. \\*
+On the courses of Scotland from Cullen to Troon \\*
+There ne'er was a golfer like \ravoon{}. \\!
+\end{rverseversion}
+
+\begin{rverse}[gd]
+Carnarvon and Carter were nearing their goal \\*
+Together with wonder they peered through the hole \\*
+There in the chamber of Tutankhamun \\*
+Amid all the treasure sat \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}
+A force was unleashed that razed homes to the ground \\*
+Burst bedrock asunder and, with a sickening sound \\*
+Lifted the seas in a fearsome typhoon \\*
+With the kindling fury of \ravoon{}. \\!
+\end{rverse}
+
+\begin{rverse}[vc]
+I scoured Flemish libraries with might and with main \\*
+Seeking gothic romances — but all in vain: \\*
+The tepid embrace of a phlegmatic Walloon \\*
+Aroused little passion in \ravoon{}. \\!
+\end{rverse}
+
+\end{verse}
+
+% Define the abbreviations:
+\printnoidxglossaries
+
+\end{document}
