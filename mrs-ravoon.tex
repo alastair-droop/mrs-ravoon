@@ -30,8 +30,10 @@
 \newcounter{thestanzaversion}
 \setcounter{thestanza}{1}
 \setcounter{thestanzaversion}{1}
-\newcommand{\stanza}[1]{{\footnotesize\hskip-\vleftskip\llap{\Roman{thestanza} (\gls{#1})}}\hskip\vleftskip\stepcounter{thestanza}\setcounter{thestanzaversion}{1}\ignorespaces}
-\newcommand{\stanzaversion}[1]{{\footnotesize\hskip-\vleftskip\llap{\Roman{thestanza}\alph{thestanzaversion} (\gls{#1})}}\hskip\vleftskip\stepcounter{thestanzaversion}\ignorespaces}
+\newcommand{\incrementstanza}{\stepcounter{thestanza}\setcounter{thestanzaversion}{1}}
+\newcommand{\incrementstanzaversion}{\stepcounter{thestanzaversion}}
+\newcommand{\stanza}[1]{{\footnotesize\hskip-\vleftskip\llap{\Roman{thestanza} (\gls{#1})}}\hskip\vleftskip\incrementstanza{}\ignorespaces}
+\newcommand{\stanzaversion}[1]{{\footnotesize\hskip-\vleftskip\llap{\Roman{thestanza}\alph{thestanzaversion} (\gls{#1})}}\hskip\vleftskip\incrementstanzaversion{}\ignorespaces}
 
 \newenvironment{rverse*}{
 \begin{patverse}
@@ -118,7 +120,7 @@ Immense on the marshes, stood \dots{} \ravoon{}! \\!
 \poemauthor{Various}
 \begin{verse}[\versewidth]
 
-\begin{rverse}
+\begin{rverse}[un]
 Yesterday's fight saw her punched on the jaw \\
 We knew she'd be angry, and probably sore --- \\
 The swelling looked much like a weather balloon \\
@@ -132,7 +134,7 @@ The first violin and second bassoon \\*
 must be played at the same time by \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[gd]
 ``You're a clever, unprincipled, self-serving liar, \\*
 You're a confident, ruthless, ambitious high-flier, \\*
 You're charming, you're mad, you can play the buffoon, \\*
@@ -174,7 +176,7 @@ For the hopes o' oor nation and the fate o' oor croon \\*
 All gae wi' the lassie called \ravoon{}.'' \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[un]
 Although she had told him he was totally wrong \\
 He would not desist from his passionate song \\
 The poor lovelorn gypsy continued to croon \\
@@ -195,14 +197,14 @@ That day she was wed to a Heavy Dragoon, \\*
 And Emily Smith became \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[un]
 I fell to my knees by the pit in the sands \\*
 I lifted the casket with trembing hands; \\*
 But I found in the chest not a single dubloon \\*
 Just a jade-inlaid bust of \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[gd]
 ``Is there life on that planet?'' the scientists wondered. \\*
 There's a clue to be found in sequence 400; \\*
 These are shots of the flank of a desolate dune, \\*
@@ -244,7 +246,7 @@ And the from her shoulders her head it was hewn. \\*
 Thus died the traitorous \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[gd]
 Though rotten tomatoes were winging my way, \\*
 On the podium I was determined to stay. \\*
 There was anger because I had dared to impugn \\*
@@ -293,7 +295,7 @@ These intelligent folk were about to maroon \\*
 The Republican Candidate \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[gd]
 Wearing a cape and a weird pointy hat \\*
 She tootled a nose-flute and hopped round a mat. \\*
 With a loud clap of thunder began the monsoon,  \\*
@@ -307,7 +309,7 @@ And dancing the tango with Ban Ki Moon \\*
 Was a banshee in Lycra: \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[un]
 What decided the battle was a small group of peasants \\*
 Brandishing pitchforks and dressed up as pheasants. \\*
 And leading the charge of this motley platoon \\*
@@ -328,21 +330,21 @@ The hand was three sevens, a `royal pontoon', \\*
 And it netted three million for \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[gd]
 The mathematician repeatedly said \\*
 He'd had nightmares where some THING had sat on his bed. \\*
 This incubus looked like a vast mouldy prune; \\*
 'Twas the Fourier transform of \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[un]
 Across her pale profile the candlelight danced, \\*
 Her measured tones held the party entranced: \\*
 Who was the sire of that noble quadroon? \\*
 Nobody knew save \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverseversion}
+\begin{rverseversion}[gd]
 The spell had malfunctioned, the outcome was curious: \\*
 He wasn't Prince Charming - in fact he was furious. \\*
 He most closely resembled a rabid raccoon \\*
@@ -354,16 +356,17 @@ Impaled on the antlers of a very large moose, \\*
 Both eyes were pecked out by a savage grey goose, \\*
 And her throat was torn out by a rabid raccoon, \\*
 Thus ends the sad saga of \ravoon{}. \\!
+\incrementstanza{}
 \end{rverseversion}
 
-\begin{rverse}
+\begin{rverse}[un]
 The night was cold, and the weather was hailey \\
 As I stepped from the darkness and into the ceilidh \\
 But there on the platform drumming a brisk rigadoon \\
 Was the one that I most feared --- \ravoon{} \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[gd]
 After months on the trail I caught up with my foe. \\*
 My six–gun was loaded; I was ready to go. \\*
 In the hot dusty street outside the saloon \\*
@@ -384,28 +387,27 @@ When up spoke the ghost of Siegfried Sassoon: \\*
 ``These are crimes against literature, \ravoon{}'' \\!
 \end{rverseversion}
 
-\begin{rverseversion}
+\begin{rverseversion}[un]
 Who dares to shatter the peace of the quad? \\
 Those who behave thus must answer to God! \\
 There, declaiming the poems of Siegfried Sassoon \\
 With passionate anguish was \ravoon{} \\!
+\incrementstanza{}
 \end{rverseversion}
 
-\stepcounter{thestanza}
-\setcounter{thestanzaversion}{1}
-
-\begin{rverseversion}
+\begin{rverseversion}[gd]
 Saint George lay concussed by the Dragon’s dread tail \\*
 The maiden continued to struggle and wail \\*
 When down through the bracken, not a moment too soon \\*
 In full shining armour rode \ravoon{}. \\!
 \end{rverseversion}
 
-\begin{rverseversion}
+\begin{rverseversion}[un]
 The taps and the hinges were crusted with rust \\*
 The loo bowl was cracked and layered with dust \\*
 I tugged at the flush not a moment too soon — \\*
 There in the U–bend lurked \ravoon{}! \\!
+\incrementstanza{}
 \end{rverseversion}
 
 \begin{rverse}[ad]
@@ -422,7 +424,7 @@ From the tureen we ladled, with a large slotted spoon \\*
 The mortal remains of \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[un]
 The ogres were feasting, on Midsummer’s night \\*
 I twisted in torment, I fled from the sight \\*
 Too late! All around me, I spotted, were strewn \\*
@@ -436,11 +438,12 @@ Hammond was dropped for the MP from Troon \\*
 That merciless martinet \ravoon{}. \\!
 \end{rverseversion}
 
-\begin{rverseversion}
+\begin{rverseversion}[gd]
 From her drivers and irons the divots fly out. \\*
 They wanted to ban her but she's got friends with clout. \\*
 On the courses of Scotland from Cullen to Troon \\*
 There ne'er was a golfer like \ravoon{}. \\!
+\incrementstanza{}
 \end{rverseversion}
 
 \begin{rverse}[gd]
@@ -450,7 +453,7 @@ There in the chamber of Tutankhamun \\*
 Amid all the treasure sat \ravoon{}. \\!
 \end{rverse}
 
-\begin{rverse}
+\begin{rverse}[un]
 A force was unleashed that razed homes to the ground \\*
 Burst bedrock asunder and, with a sickening sound \\*
 Lifted the seas in a fearsome typhoon \\*
